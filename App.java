@@ -54,7 +54,42 @@ class App {
             }
 
             // print out the state of the game
-            showError(game.getErrorCount());
+            switch (game.getErrorCount()){
+    
+                case 1 : Error.error1();
+                break;
+    
+                case 2 : Error.error2();
+                break;
+    
+                case 3 : Error.error3();
+                break;
+    
+                case 4 : Error.error4();
+                break;
+    
+                case 5 : Error.error5();
+                break;
+    
+                case 6 : Error.error6();
+                break;
+    
+                case 7 : Error.error7();
+                break;
+    
+                case 8 : Error.error8();
+                break;
+    
+                case 9 : Error.error9();
+                break;
+    
+                case 10 : Error.error10();
+                break;
+    
+                default : Error.error0();
+    
+            }
+
             System.out.println(System.lineSeparator());
 
             //print out the current state of the word being guessed
@@ -79,48 +114,11 @@ class App {
         }
         if (game.lose()){
             System.out.println("***Bouhhhh... Vous avez perdu...***");
+            System.out.println("le mot est : " + mot );
         }
         System.out.println(System.lineSeparator());
 
         
-    }
-
-    public static void showError(int errorCount){
-        switch (errorCount){
-
-            case 1 : Error.error1();
-            break;
-
-            case 2 : Error.error2();
-            break;
-
-            case 3 : Error.error3();
-            break;
-
-            case 4 : Error.error4();
-            break;
-
-            case 5 : Error.error5();
-            break;
-
-            case 6 : Error.error6();
-            break;
-
-            case 7 : Error.error7();
-            break;
-
-            case 8 : Error.error8();
-            break;
-
-            case 9 : Error.error9();
-            break;
-
-            case 10 : Error.error10();
-            break;
-
-            default : Error.error0();
-
-        }
     }
     
 }
